@@ -8,9 +8,10 @@ public class ConvertToBooleans {
    int [][] numbers;
    Scanner scan = new Scanner( System.in );
  
- // Get two positive numbers from user
+// Get two positive numbers from user
    
    int rows, columns;
+	 
    do {
 	   
      System.out.print( "Enter a number of rows for the array > " );
@@ -23,23 +24,23 @@ public class ConvertToBooleans {
    
    while ( rows < 1 || columns < 1 );
    
- // instantiate and generate array numbers
+// instantiate and generate array numbers
    
    numbers = new int[rows][columns];     
    generateArray( numbers );   
    
    System.out.println( "The resulting array is:\n" + toString( numbers ) );
 
- // convert all array elements to boolean values   
+// convert all array elements to boolean values   
    
    boolean [][] binaryValues = convertToArrayOfBooleans( numbers );
    
    System.out.println( "The resulting array is:\n" + toString( binaryValues ) );
+	 
+ }
 
- 	}
-
- // This method runs in O( p * q ) where p = number of rows in arr q = 
- // number of columns in arr
+// This method runs in O( p * q ) where p = number of rows in arr q = 
+// number of columns in arr
  
  public static boolean[][] convertToArrayOfBooleans( int [][] arr ) {
 	 
@@ -59,8 +60,7 @@ public class ConvertToBooleans {
    System.out.println( "Number of statements executed inside innermost loop: " + count );
    return result;
    
- 	}
-
+ }
 
  public static String toString( boolean [][] arr ) {
 	 
@@ -70,6 +70,7 @@ public class ConvertToBooleans {
      for ( int j = 0; j < arr[i].length; j++ ) {
        result += arr[i][j] + " ";
      result += "\n"; 
+	     
    }
    }
      
@@ -77,10 +78,8 @@ public class ConvertToBooleans {
    
    }
 
-
  public static String toString( int [][] arr ) {
 	 
- 
    String result = "";
    for ( int i = 0; i < arr.length; i++ ) {
      for ( int j = 0; j < arr[i].length; j++ ) {
@@ -92,7 +91,6 @@ public class ConvertToBooleans {
    return result;
    
    }
-
 
  public static void generateArray( int [][] arr ) {
 	 
