@@ -58,7 +58,6 @@ public class LargestOfColumn {
 			if (colIndex < arr[i].length) {
 				if (maximum < arr[i][colIndex])
 					maximum = arr[i][colIndex];
-
 			}
 			
 			count++;
